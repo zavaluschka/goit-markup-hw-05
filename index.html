@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +21,8 @@
                    <nav class="header-nav">
                         <a  class="header-link link list" href="./index.html">Web<span class="header-logo">Studio</span> </a>
                         <ul class="list header-list">
-                            <li class="header-item"><a class="header-item-link link" href="./index.html">Studio</a></li>
-                            <li class="header-item"><a class="header-item-link link" href="./portfolio.html">Portfolio</a></li>
+                            <li class="header-item"><a class="header-item-link current link" href="./index.html">Studio</a></li>
+                            <li class="header-item"><a class="header-item-link  link" href="./portfolio.html">Portfolio</a></li>
                             <li class="header-item"><a class="header-item-link link" href="">Contacts</a></li>
                         </ul>
                    </nav >
@@ -37,7 +38,16 @@
         <section class="hero">
             <div class="container container-hero">
                 <h1 class="hero-title">Effective Solutions for Your Business</h1>
-                <button class="hero-btn" type="button">Order Service</button>
+                <button class="hero-btn" type="button" data-modal-open>Order Service</button>
+            </div>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="modal-btn" type="button" data-modal-close>
+                        <svg class="modal-icon" width="8" height="8">
+                          <use href="./images/icons.svg#icon-close-black"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </section>
         <section class="feature">
@@ -196,7 +206,7 @@
     <section class="customers">
         <div class="container customers-container">
             <h2 class="title-cust" >Customers</h2>
-            <ul class="clients-list list">
+            <ul class="clients-list list" data-aos="zoom-in-down" data-aos-duration="700">
                     <li class="clients-item"><a href="" class="client-link"><svg class="client-icon" width="104" height="56">
                       <use href="./images/icons.svg#icon-logo1"></use>
                     </svg></a></li>
@@ -251,6 +261,9 @@
                     </div>
         </div>
     </footer>
-   
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./js/animation.js"></script>
+ <script src="./js/modal.js"></script> 
+
 </body>
  
